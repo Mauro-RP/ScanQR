@@ -17,22 +17,27 @@
     />
     <View
             android:id="@+id/captureView"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="190dp"
+            android:layout_height="190dp"
             android:layout_gravity="center"
             android:background="@drawable/capture_view_background"
-            tools:ignore="MissingClass"
     />
     </FrameLayout>
-
+    <TextView
+            android:id="@+id/coordenadas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Coordenadas: "
+            app:layout_constraintTop_toBottomOf="@+id/playerView"
+            tools:ignore="NotSibling"/>
     <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Texto del código QR: "
-            app:layout_constraintTop_toBottomOf="@+id/playerView"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/coordenadas"
             tools:ignore="NotSibling"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
 

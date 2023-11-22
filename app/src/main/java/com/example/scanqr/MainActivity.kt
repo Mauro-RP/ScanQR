@@ -82,6 +82,17 @@ class VideoActivity : AppCompatActivity(), VideoFrameMetadataListener {
         val width = (screenWidth).toInt() // Ajusta el valor según el ancho deseado del área central
         val height = (screenHeight).toInt() // Ajusta el valor según el alto deseado del área central
 
+        // Calcula las coordenadas y dimensiones del área de captura
+        val left = x
+        val top = y
+        val right = x + width
+        val bottom = y + height
+
+        // Imprime las coordenadas y dimensiones del área de captura
+        Log.d("CaptureArea", "Left: $left, Top: $top, Right: $right, Bottom: $bottom")
+        val coordenadas = findViewById<TextView>(R.id.textView)
+        coordenadas.text = "coordenadas captura: Left: $left, Top: $top, Right: $right, Bottom: $bottom"
+
         // Captura solo el área central del fotograma
         val croppedBitmap = Bitmap.createBitmap(bitmap, x, y, width, height)
 
